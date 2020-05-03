@@ -50,14 +50,14 @@ class CompanyActivity : AppCompatActivity(), OnMapReadyCallback, VolleyCallback 
                     wwwTextView.text = www
                     descriptionTextView.text = description
 
+                    volleyCallback.onCallback(LatLng(lat, lon), name)
+
                     Picasso.get()
                         .load("http://megakohz.bget.ru/test_task/$img")
                         .placeholder(R.drawable.placeholder)
                         .fit()
                         .centerInside()
                         .into(logoImageView)
-
-                    volleyCallback.onCallback(LatLng(lat, lon), name)
 
                 } catch (e: JSONException) {
                     Log.e("JsonError", e.toString())
@@ -86,7 +86,6 @@ class CompanyActivity : AppCompatActivity(), OnMapReadyCallback, VolleyCallback 
         mMap.addMarker(MarkerOptions().position(companyLocation).title("Location of $name"))
 
     }
-
 }
 
 interface VolleyCallback {
