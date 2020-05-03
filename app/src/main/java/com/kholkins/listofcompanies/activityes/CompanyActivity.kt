@@ -77,9 +77,9 @@ class CompanyActivity : AppCompatActivity(), OnMapReadyCallback, VolleyCallback 
         mMap = googleMap
     }
 
-    override fun onCallback(response: LatLng, name: String) {
+    override fun onCallback(latlng: LatLng, name: String) {
 
-        var companyLocation = response
+        var companyLocation = latlng
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(companyLocation))
         mMap.animateCamera(CameraUpdateFactory.zoomTo(12F))
@@ -90,5 +90,5 @@ class CompanyActivity : AppCompatActivity(), OnMapReadyCallback, VolleyCallback 
 }
 
 interface VolleyCallback {
-    fun onCallback(response: LatLng, name: String)
+    fun onCallback(latlng: LatLng, name: String)
 }
