@@ -1,5 +1,6 @@
 package com.kholkins.listofcompanies.activityes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.volley.Request
@@ -20,10 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var items = ArrayList<Company>()
-
+        val intent = Intent(this, CompanyActivity::class.java)
         val myAdapter = MainAdapter(items, object : MainAdapter.Callback {
             override fun onItemClicked(item: Company) {
-                //TODO Сюда придёт элемент, по которому кликнули. Можно дальше с ним работать
+
+                intent.putExtra("id", item.id)
+                startActivity(intent)
             }
         })
 
