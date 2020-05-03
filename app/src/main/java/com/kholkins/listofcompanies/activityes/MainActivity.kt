@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         })
+        val columnCount = resources.getInteger(R.integer.column_count)
+        var layoutManager = GridLayoutManager(this, columnCount)
 
         var queue = Volley.newRequestQueue(this)
         val url = "http://megakohz.bget.ru/test_task/test.php"
@@ -47,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     recyclerView.adapter = myAdapter
+                    recyclerView.layoutManager = layoutManager
                     recyclerView.hasFixedSize()
                 } catch (e: JSONException) {
                     Log.e("JsonError", e.toString())
