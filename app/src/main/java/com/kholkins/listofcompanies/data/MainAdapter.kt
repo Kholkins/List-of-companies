@@ -42,7 +42,6 @@ class MainAdapter(var items: List<Company>, val callback: Callback) : RecyclerVi
                 if (adapterPosition != RecyclerView.NO_POSITION) callback.onItemClicked(items[adapterPosition])
             }
 
-
         }
     }
 

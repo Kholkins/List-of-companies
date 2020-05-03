@@ -3,6 +3,7 @@ package com.kholkins.listofcompanies.activityes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
@@ -48,10 +49,10 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.adapter = myAdapter
                     recyclerView.hasFixedSize()
                 } catch (e: JSONException) {
-                    e.printStackTrace()
+                    Log.e("JsonError", e.toString())
                 }
 
-            }, Response.ErrorListener { error -> error.printStackTrace() })
+            }, Response.ErrorListener { error -> Log.e("VolleyError", error.toString()) })
 
         queue.add(request)
 

@@ -63,6 +63,7 @@ class CompanyActivity : AppCompatActivity(), OnMapReadyCallback, VolleyCallback 
                     Log.e("JsonError", e.toString())
                 }
 
+
             }, Response.ErrorListener { error -> Log.e("VolleyError", error.toString()) })
 
         queue.add(request)

@@ -20,56 +20,51 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <ImageView
                 android:id="@+id/logoImageView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp" />
 
             <TextView
                 android:id="@+id/descriptionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:text="Description" />
 
             <fragment
                 android:id="@+id/map"
-                android:layout_marginTop="8dp"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                map:liteMode="true"/>
+                android:layout_marginTop="8dp"
+                map:liteMode="true" />
 
             <TextView
                 android:id="@+id/wwwTextView"
-                android:layout_marginTop="8dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:autoLink="all"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/phoneTextView"
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:autoLink="phone"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
     </ScrollView>
-
-
-
-
 
 </LinearLayout>
 
