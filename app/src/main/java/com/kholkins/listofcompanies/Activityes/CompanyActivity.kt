@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.activityes
+package com.kholkins.listofcompanies.Activityes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.data
+package com.kholkins.listofcompanies.Data
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kholkins.listofcompanies.R
-import com.kholkins.listofcompanies.model.Company
+import com.kholkins.listofcompanies.Model.Company
 import com.squareup.picasso.Picasso
 
 class MainAdapter(var items: List<Company>, val callback: Callback) : RecyclerView.Adapter<MainAdapter.MainHolder>() {

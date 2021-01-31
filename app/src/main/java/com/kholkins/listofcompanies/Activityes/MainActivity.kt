@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.activityes
+package com.kholkins.listofcompanies.Activityes
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +10,8 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.kholkins.listofcompanies.R
-import com.kholkins.listofcompanies.data.MainAdapter
-import com.kholkins.listofcompanies.model.Company
+import com.kholkins.listofcompanies.Data.MainAdapter
+import com.kholkins.listofcompanies.Model.Company
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONException
 import java.util.ArrayList
@@ -59,6 +59,5 @@ class MainActivity : AppCompatActivity() {
             }, Response.ErrorListener { error -> Log.e("VolleyError", error.toString()) })
 
         queue.add(request)
-
     }
 }

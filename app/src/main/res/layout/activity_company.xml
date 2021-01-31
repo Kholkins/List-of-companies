@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".activityes.CompanyActivity">
+    tools:context=".Activityes.CompanyActivity">
 
     <TextView
         android:id="@+id/nameCompanyTextView"

@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.model
+package com.kholkins.listofcompanies.Model
 
 data class Company (
     val id: String,
