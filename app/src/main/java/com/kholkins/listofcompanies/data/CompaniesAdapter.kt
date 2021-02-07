@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.Data
+package com.kholkins.listofcompanies.data
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kholkins.listofcompanies.R
-import com.kholkins.listofcompanies.Model.Company
+import com.kholkins.listofcompanies.model.Company
 import com.squareup.picasso.Picasso
 
-class MainAdapter(var items: List<Company>, val callback: Callback) : RecyclerView.Adapter<MainAdapter.MainHolder>() {
+class CompaniesAdapter(var items: List<Company>, val callback: Callback) : RecyclerView.Adapter<CompaniesAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
             = MainHolder(LayoutInflater.from(parent.context).inflate(R.layout.company_item, parent, false))
@@ -28,9 +28,9 @@ class MainAdapter(var items: List<Company>, val callback: Callback) : RecyclerVi
 
         fun bind(item: Company) {
 
-            var url = item.imageUrl
+            val url = item.img
             Picasso.get()
-                .load("http://megakohz.bget.ru/test_task/$url")
+                .load("https://lifehack.studio/test_task/$url")
                 .placeholder(R.drawable.placeholder)
                 .fit()
                 .centerInside()

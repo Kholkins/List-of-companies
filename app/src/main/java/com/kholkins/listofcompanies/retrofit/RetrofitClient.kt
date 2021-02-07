@@ -1,4 +1,4 @@
-package com.kholkins.listofcompanies.Retrofit
+package com.kholkins.listofcompanies.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

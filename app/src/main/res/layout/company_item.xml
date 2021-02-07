@@ -4,28 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    app:cardElevation="8dp"
     app:cardCornerRadius="8dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="167dp">
 
         <ImageView
             android:id="@+id/companyImageView"
-            android:layout_width="match_parent"
-            android:src="@mipmap/ic_launcher"
-            android:layout_height="200dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/CompanyImageItem" />
 
         <TextView
             android:id="@+id/nameTextView"
-            android:text="Name"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:text="@string/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/companyImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/NameTextItem" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

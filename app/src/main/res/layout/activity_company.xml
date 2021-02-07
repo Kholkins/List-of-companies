@@ -6,14 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".Activityes.CompanyActivity">
+    tools:context=".activities.CompanyActivity">
 
     <TextView
         android:id="@+id/nameCompanyTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="28sp" />
+        android:text="@string/name"
+        style="@style/NameCompany" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,19 +22,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <ImageView
-                android:id="@+id/logoImageView"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="8dp"
-                tools:ignore="ContentDescription" />
+                android:id="@+id/imageViewCompany"
+                tools:ignore="ContentDescription"
+                style="@style/ImageCompany" />
 
             <TextView
                 android:id="@+id/descriptionTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"/>
+                style="@style/DescriptionTextCompany" />
 
             <fragment
                 android:id="@+id/map"
@@ -48,19 +41,11 @@
 
             <TextView
                 android:id="@+id/wwwTextView"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:autoLink="all"
-                android:textSize="20sp" />
+                style="@style/WWWTextCompany" />
 
             <TextView
                 android:id="@+id/phoneTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:autoLink="phone"
-                android:textSize="20sp" />
+                style="@style/PhoneTextCompany" />
 
         </LinearLayout>
 

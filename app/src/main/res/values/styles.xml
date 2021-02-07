@@ -8,4 +8,57 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="WWWTextCompany">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:autoLink">all</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="PhoneTextCompany">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:autoLink">phone</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="DescriptionTextCompany">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="ImageCompany">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">350dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="NameCompany">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="CompanyImageItem">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:contentDescription">@string/company_picture</item>
+    </style>
+
+    <style name="NameTextItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">68dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
